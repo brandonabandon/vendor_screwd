@@ -22,3 +22,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.screwd.version=$(SCREWD_VERSION) \
     ro.modversion=$(SCREWD_MOD_VERSION) \
     ro.screwd.buildtype=$(SCREWD_BUILD_TYPE)
+
+# DragonTC info
+DRAGONTC_VERSION := 7.0
+
+DTC_PATH := prebuilts/clang/host/linux-x86/$(DRAGONTC_VERSION)
+DTC_VER := $(shell cat $(DTC_PATH)/VERSION)
+
+-include prebuilts/clang/host/linux-x86/$(DRAGONTC_VERSION)/DragonTC.mk
+
